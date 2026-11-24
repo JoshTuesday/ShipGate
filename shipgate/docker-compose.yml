@@ -1,0 +1,10 @@
+# Local blue/green rehearsal: both versions run side by side.
+services:
+  blue:
+    build: .
+    ports: ["3001:3000"]
+    environment: { APP_VERSION: blue-stable }
+  green:
+    build: .
+    ports: ["3002:3000"]
+    environment: { APP_VERSION: green-candidate }

@@ -1,0 +1,17 @@
+{
+  "name": "shipgate",
+  "version": "1.0.0",
+  "description": "A release-risk scoring API whose real product is its CI/CD pipeline.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "lint": "node scripts/lint.js",
+    "test": "node --test \"test/*.test.js\"",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-lines=85 \"test/*.test.js\"",
+    "canary": "node scripts/canary.js",
+    "canary:chaos": "node scripts/canary.js --fail-rate=0.6",
+    "verify": "npm run lint && npm run test:coverage && npm run canary"
+  },
+  "engines": { "node": ">=22" },
+  "license": "MIT"
+}

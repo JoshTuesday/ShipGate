@@ -1,0 +1,7 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "Verify (lint + test + canary)", "type": "npm", "script": "verify", "group": "test" },
+    { "label": "Chaos drill (expect rollback)", "type": "npm", "script": "canary:chaos" }
+  ]
+}
